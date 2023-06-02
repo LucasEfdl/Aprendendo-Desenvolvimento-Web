@@ -1,0 +1,180 @@
+
+Leve em cosideraçãoq ue eu fiz só
+
+Questão 1  
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+#include<string.h>
+
+typedef struct funcionario{
+  char nome[50];
+  float salario;
+  char cargo[20];
+  int ID; 
+}Funcionario;
+
+void preencher_dados(Funcionario * funcionario, int qtdFuncionario){
+	int i;
+	for(int i = 0; i < qtdFuncionario; i++){
+    printf("Digite o nome do %dº funcionario:\n", i + 1);
+    scanf(" %[^\n]", funcionario[i].nome);
+    printf("Digite o salario do %dº funcionario:\n", i + 1);
+    scanf("%f", &funcionario[i].salario);
+    printf("Digite o cargo do %dº funcionario:\n", i + 1);
+    scanf(" %[^\n]", funcionario[i].cargo);
+    printf("Digite o indentificador do %dº funcionario:\n", i + 1);
+    scanf("%d", &funcionario[i].ID);
+    printf("\n");
+  }
+}
+
+void imprime_funcionario(Funcionario * funcionario, int qtdFuncionario) {
+	int i;
+  for(int i = 0; i < qtdFuncionario; i++){
+	  printf("\n");
+    printf("Nome: %s\nSalário: %.2f\nCargo: %s \nID: %d\n\n", funcionario[i].nome, funcionario[i].salario, funcionario[i].cargo, funcionario[i].ID);
+  }
+}
+
+void altera_salario(Funcionario * funcionario, int qtdFuncionario) {
+	int indice, index, novoSalario;
+	printf("Informe o ID do funcionario que deseja alterar o salario: ");
+	scanf("%d", &indice);
+  for(index=0; index<qtdFuncionario; index++){
+		if(funcionario[index].ID == indice){
+      printf("Informe o novo salario desse funcionario: ");
+	    scanf("%f", &funcionario[index].salario);
+		}
+	}
+}
+
+void maior_menor_salario(Funcionario * funcionario, int qtdFuncionario){
+	int i;
+	float maiorSalario = 0;
+	float menorSalario = 99999;
+	char maiorCargo[20], menorCargo[20];
+	
+	for(i=0; i<qtdFuncionario; i++) {
+		if(funcionario[i].salario> maiorSalario){
+			maiorSalario = funcionario[i].salario;
+			strcpy(maiorCargo, funcionario[i].cargo);
+		}
+		if(funcionario[i].salario < menorSalario) {
+			menorSalario = funcionario[i].salario;
+			strcpy(menorCargo, funcionario[i].cargo);
+		}
+	}
+	printf("\nFuncionario que mais recebe:\nSalario: %.2f\nCargo: %s\n", maiorSalario, maiorCargo);
+	printf("\nFuncionario que menos recebe:\nSalario: %.2f\nCargo: %s\n", menorSalario, menorCargo);
+}
+
+int main(void) {
+  setlocale(LC_ALL, "Portuguese");
+  int n, c;
+  printf("Quantos funcionários deseja cadastra?\n");
+  scanf("%d", &n);
+  Funcionario *funcionario = (Funcionario *) malloc(n * sizeof(Funcionario));
+	
+	preencher_dados(funcionario, n);
+
+  imprime_funcionario(funcionario, n);
+
+  printf("Deseja alterar o salario de algum funcionario?\n");
+  scanf("%d", &c);
+  if(c == 1){
+    altera_salario(funcionario, n);
+	}
+	maior_menor_salario(funcionario, n);
+  free(funcionario);
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Questão 2
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+#include<string.h>
+
+typedef struct pessoa{
+  char nome[50];
+  float numeroDocumento;
+  int idade; 
+}Pessoa;
+
+void preencher_dados(Pessoa * pessoa, int qtdPessoas){
+	int i;
+	for(int i = 0; i < qtdPessoas; i++){
+    printf("Digite o nome da %dº pessoa:\n", i + 1);
+    scanf(" %[^\n]", pessoa[i].nome);
+    printf("Digite o número do documento da %dº pessoa:\n", i + 1);
+    scanf("%f", &pessoa[i].numeroDocumento);
+    printf("Digite a idade do %dº pessoa:\n", i + 1);
+    scanf("%d", &pessoa[i].idade);
+    printf("\n");
+  }
+}
+
+void imprime_pessoa(Pessoa * pessoa, int qtdPessoas) {
+	int i;
+  for(int i = 0; i < qtdPessoas; i++){
+	  printf("\n");
+    printf("Nome: %s\nNúmero do docuemnto: %.0f\nIdade: %d\n\n", pessoa[i].nome, pessoa[i].numeroDocumento, pessoa[i].idade);
+  }
+}
+
+void altera_idade(Pessoa * pessoa, int qtdPessoas) {
+	float numberDocument;
+  int i, novoSalario;
+	printf("Informe o Número do documento da pessoa que deseja alterar a idade: ");
+	scanf("%f", &numberDocument);
+  for(i=0; i<qtdPessoas; i++){
+		if(pessoa[i].numeroDocumento == numberDocument){
+      printf("Informe a nova idade dessa pessoa: ");
+	    scanf("%d", &pessoa[i].idade);
+		}
+	}
+}
+
+void maior_menor_idade(Pessoa * pessoa, int qtdPessoas){
+	int i;
+	int maiorIdade = 0;
+	int menorIdade = 120;
+	char pessoaVelha[20], pessoaNova[20];
+	
+	for(i=0; i<qtdPessoas; i++) {
+		if(pessoa[i].idade > maiorIdade){
+			maiorIdade = pessoa[i].idade;
+			strcpy(pessoaVelha, pessoa[i].nome);
+		}
+		if(pessoa[i].idade < menorIdade) {
+			menorIdade = pessoa[i].idade;
+			strcpy(pessoaNova, pessoa[i].nome);
+		}
+	}
+	printf("\nPessoa mais velha:\n%s\nPessoa mais nova:%s\n", pessoaVelha, pessoaNova);
+}
+
+int main(void) {
+  setlocale(LC_ALL, "Portuguese");
+  int n, c;
+  printf("Quantas pessoas deseja cadastra?\n");
+  scanf("%d", &n);
+  Pessoa *pessoa = (Pessoa *) malloc(n * sizeof(Pessoa));
+	
+	preencher_dados(pessoa, n);
+
+  imprime_pessoa(pessoa, n);
+
+  printf("Deseja alterar a idade de alguma pessoa? (sim = 1, não = 0)\n");
+  scanf("%d", &c);
+  if(c == 1){
+    altera_idade(pessoa, n);
+	}
+	maior_menor_idade(pessoa, n);
+  free(pessoa);
+}
+---------------------------------------------------------------------------------------------------------------------------------

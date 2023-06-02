@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Lib animação -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Lib animação de textos</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container1 {
+        min-height: 100vh;
+        background-color: rgb(10, 11, 80);
+        color: white;
+      }
+      .container2 {
+        min-height: 100vh;
+        background-color: rgb(10, 11, 80);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+      <div data-aos="fade-right">
+        <h1>Hello world</h1>
+      </div>
+    </div>
+    <div class="container2">
+      <div data-aos="fade-left">wsfgwsegfwefwse</div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

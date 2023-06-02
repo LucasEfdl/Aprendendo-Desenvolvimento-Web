@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let mensagem = "";
+      var n1 = prompt("Digite o primeiro número: ");
+      var n2 = prompt("Digite o segundo número: ");
+      var n3 = prompt("Digite o terceiro número: ");
+
+      if (n1 > n2 && n1 > n3) {
+        mensagem = "O primeiro número informado é maior!";
+      } else if (n2 > n1 && n2 > n3) {
+        mensagem = "O segundo número informado é maior!";
+      } else if (n3 > n1 && n3 > n2) {
+        mensagem = "O terceiro número informado é maior!";
+      } else {
+        mensagem = "Os números informado são iguais ou não foi informado nada";
+      }
+      alert(mensagem);
+    </script>
+  </head>
+  <body>
+    <h1>Exercicio 3</h1>
+  </body>
+</html>

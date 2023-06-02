@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-image: url(../../image/backgroundLp.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+.container1 {
+  margin-top: 50px;
+  background-color: $background-color;
+  width: 450px;
+  height: auto;
+}
+.TopLogo {
+  margin-top: 10px;
+  width: 185px;
+}
+.paragraph {
+  margin: 8px 0px;
+}
+.btnSend {
+  color: $button-color;
+}
+.fotter {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}

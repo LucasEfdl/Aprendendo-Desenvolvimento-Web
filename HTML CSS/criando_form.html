@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cadastro Para a lIga dos Astronautas</title>
+  </head>
+  <body>
+    <form>
+      <h3>Cadastro da laiga dos astronautas</h3>
+      <label for="name">Nome</label>
+      <input type="text" />
+      <br />
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" /> -
+      <label for="pwd">Password</label>
+      <input type="password" name="pwd" id="pwd" />
+      <br />
+      <br />
+      <label for="data">Data de Nascismento</label>
+      <input type="date" name="data" id="data" /> -
+      <label for="foto">Foto</label>
+      <input type="file" name="foto" id="foto" />
+      <br />
+      <br />
+      <label for="nacionalidade">Nacionalidade</label>
+      <select name="nacionalidade" id="nacionalidade">
+        <option value="russo">Russo</option>
+        <option value="americano">Americano</option>
+        <option value="brasileiro">Brasileiro</option>
+      </select>
+
+      - Genero
+      <label for="femea">F</label>
+      <input type="radio" name="gender" id="femea" />
+      <label for="macho">M</label>
+      <input type="radio" name="gender" id="macho" />
+      <br />
+      Suas principais qualidades:
+      <br />
+      <label for="qi">Inteligencia</label>
+      <input type="checkbox" name="qi" id="qi" />|
+      <label for="rs">Resiliência</label>
+      <input type="checkbox" name="rs" id="rs" />|
+      <label for="fisico">Preparo Fisico</label>
+      <input type="checkbox" name="fisico" id="fisico" />|
+      <label for="edu">Educação</label>
+      <input type="checkbox" name="edu" id="edu" />|
+      <br />
+      <br />
+      <textarea
+        name="description"
+        id="description"
+        cols="30"
+        rows="10"
+        placeholder="Por que você quer ser um Astronauta?"
+      ></textarea>
+      <br />
+      <br />
+      <input type="submit" value="Criar" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+//Usando herança
+.btn {
+  width: 125px;
+  padding: 10px 0;
+  border-radius: 20px;
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  &.btn-green {
+    background-color: green;
+  }
+  &.btn-red {
+    background-color: red;
+  }
+}
+
+//Usando extend
+.btn-yellow {
+  @extend .btn;
+  background-color: yellow;
+  &:hover {
+    background-color: black;
+    color: white;
+    transition: 500ms;
+  }
+}

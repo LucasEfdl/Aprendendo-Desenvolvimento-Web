@@ -1,0 +1,25 @@
+.btn, .btn-yellow {
+  width: 125px;
+  padding: 10px 0;
+  border-radius: 20px;
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.btn.btn-green, .btn-green.btn-yellow {
+  background-color: green;
+}
+.btn.btn-red, .btn-red.btn-yellow {
+  background-color: red;
+}
+
+.btn-yellow {
+  background-color: yellow;
+}
+.btn-yellow:hover {
+  background-color: black;
+  color: white;
+  transition: 500ms;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,143 @@
+.container00 {
+  &.container05 {
+    background-image: url("../../image/falcon9/01.jpg");
+  }
+  &.container06 {
+    background-image: url("../../image/falcon9/02.jpg");
+  }
+  &.carousel01 {
+    background-image: url("../../image/falcon9/03.jpg");
+  }
+  &.carousel02 {
+    background-image: url("../../image/falcon9/04.jpg");
+  }
+  &.carousel03 {
+    background-image: url("../../image/falcon9/05.jpg");
+  }
+  &.carousel04 {
+    background-image: url("../../image/falcon9/06.jpg");
+  }
+  &.carousel05 {
+    background-image: url("../../image/falcon9/07.jpg");
+  }
+  &.container07 {
+    background-image: url("../../image/falcon9/08.jpg");
+  }
+  &.container08 {
+    background-color: black;
+  }
+}
+.facon9Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+}
+.facon9Title {
+  font-size: 100px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+.numbers {
+  height: 40vh;
+  background-color: black;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .titleNumber {
+    font-size: 90px;
+  }
+  .subTitleNumber {
+    font-size: 20px;
+  }
+}
+.facon9Desc {
+  font-size: 22px;
+  width: 640px;
+  line-height: 50px;
+}
+.containerFacon9Desc {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: left;
+}
+#overViewPosition {
+  width: 80vh;
+  margin-left: 8%;
+  padding-top: 15%;
+}
+.slide {
+  img {
+    height: 100vh;
+  }
+}
+.carouselText {
+  background-color: black;
+}
+.downloadDesc {
+  height: 85vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  a {
+    text-decoration: none;
+    color: $copy-color;
+    &:hover {
+      color: $link-hover;
+    }
+  }
+}
+.btnFacon9 {
+  button {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 818px) {
+  .numbers {
+    .titleNumber {
+      font-size: 65px;
+    }
+    .subTitleNumber {
+      font-size: 13px;
+    }
+  }
+  .facon9Desc {
+    font-size: 18px;
+    width: 500px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 584px) {
+  .facon9Title {
+    font-size: 85px;
+    font-weight: 300;
+  }
+  .numbers {
+    height: 60vh;
+    .titleNumber {
+      font-size: 45px;
+    }
+    .subTitleNumber {
+      font-size: 8px;
+    }
+  }
+  .downloadDesc {
+    button {
+      padding: auto;
+      margin: auto;
+      font-size: 15px;
+    }
+  }
+}
+@media (max-width: 530px) {
+  .downloadDesc {
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

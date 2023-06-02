@@ -1,0 +1,46 @@
+.header {
+  font-size: 12px;
+  font-weight: bold;
+  #navItem {
+    &:hover {
+      color: $link-hover;
+    }
+  }
+}
+.container00 {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.arrowDown {
+  display: inline-block;
+  width: 90px;
+  margin-top: 5px;
+}
+.logoPc {
+  width: 240px;
+  margin-left: -10px;
+  margin-right: 40px;
+}
+#button {
+  padding: $padding-button;
+}
+.footer {
+  background-color: black;
+  min-height: 15vh;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    text-decoration: none;
+    color: white;
+    &:hover {
+      color: $link-hover;
+    }
+  }
+  .copy {
+    color: $copy-color;
+  }
+}
