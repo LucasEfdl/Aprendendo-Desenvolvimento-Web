@@ -24,3 +24,16 @@ console.log(
     { not: 3, weight: 1 }
   )}`
 );
+
+const median = (...numbers) => {
+  const organizedNumbers = [...numbers].sort((a, b) => a - b);
+  const middle = Math.floor(organizedNumbers.length / 2);
+  if (organizedNumbers.length % 2 !== 0) {
+    return organizedNumbers[middle];
+  }
+  const fistMiddle = organizedNumbers[middle - 1];
+  const secundMiddle = organizedNumbers[middle];
+  return (fistMiddle + secundMiddle) / 2;
+};
+
+console.log(`A mediana é: ${median(2, 4, 5, 7, 42, 8)}`);
