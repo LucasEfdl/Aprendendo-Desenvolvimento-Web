@@ -37,3 +37,17 @@ const median = (...numbers) => {
 };
 
 console.log(`A mediana é: ${median(2, 4, 5, 7, 42, 8)}`);
+
+const moda = (...numbers) => {
+  const quantities = numbers.map((num) => [
+    num,
+    numbers.filter((n) => n === num).length,
+  ]);
+  quantities.sort((a, b) => b[1] - a[1]);
+  if (quantities[0][1] === 1) {
+    return "Não existe uma moda.";
+  }
+  return quantities[0][0];
+};
+
+console.log(`Moda: ${moda(1, 2, 3, 4, 5, 6, 6)}`);
